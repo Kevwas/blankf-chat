@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "signal-clone",
-    "slug": "signal-clone",
+    "name": "blankf-chat",
+    "slug": "blankf-chat",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/blankfactor/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/blankfactor/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,7 +21,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/blankfactor/icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },

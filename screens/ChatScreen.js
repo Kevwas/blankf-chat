@@ -165,7 +165,7 @@ const ChatScreen = ({ navigation, route: { params } }) => {
                 activeOpacity={0.5}
                 disabled={!input}
               >
-                <Ionicons name="send" size={24} color="#2b68e7" />
+                <Ionicons name="send" size={24} color="#00d0eb" />
               </TouchableOpacity>
             </View>
           </>
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
   },
   sender: {
     padding: 15,
-    backgroundColor: "#2b68e6",
+    backgroundColor: "#00d0eb",
     alignSelf: "flex-start",
     borderRadius: 20,
     marginLeft: 15,

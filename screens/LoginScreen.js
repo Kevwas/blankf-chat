@@ -38,7 +38,7 @@ const LoginScreen = ({ navigation }) => {
         <Image 
           source={{
             uri:
-              "https://blog.mozilla.org/internetcitizen/files/2018/08/signal-logo.png",
+              "https://media-exp1.licdn.com/dms/image/C4E0BAQGf77zPevKi_Q/company-logo_200_200/0?e=2159024400&v=beta&t=lgGnNrEO3uWyHV1NyRu4PKwlhNdnKH6PFhD8D67xMY4",
           }}
           style={{ width: 200, height: 200 }}
         />

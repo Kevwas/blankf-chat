@@ -15,7 +15,7 @@ LogBox?.ignoreLogs(['Setting a timer for a long period of time']);
 const Stack = createStackNavigator();
 
 const globalScreenOptions = {
-  headerStyle: { backgroundColor: "#2C6BED" },
+  headerStyle: { backgroundColor: "#00d0eb" },
   headerTitleStyle: { color: "white" },
   heaederTintColor: "white",
   headerTitleAlign: "center",
