@@ -72,15 +72,13 @@ const ChatScreen = ({ navigation, route: { params } }) => {
 
   const sendMessage = () => {
     Keyboard.dismiss();
-
     db.collection("chats").doc(params.id).collection('messages').add({
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       message: input,
       displayName: auth.currentUser.displayName,
       email: auth.currentUser.email,
       photoURL: auth.currentUser.photoURL
-    })
-
+    });
     setInput("");
   }
 
@@ -160,11 +158,12 @@ const ChatScreen = ({ navigation, route: { params } }) => {
                 placeholder="Signal Message" 
                 style={styles.textInput} 
                 onChangeText={(text) => setInput(text)}
-                onSubmitEditing={sendMessage}
+                // onSubmitEditing={sendMessage}
               />
               <TouchableOpacity 
                 onPress={sendMessage} 
                 activeOpacity={0.5}
+                disabled={!input}
               >
                 <Ionicons name="send" size={24} color="#2b68e7" />
               </TouchableOpacity>

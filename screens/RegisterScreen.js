@@ -1,10 +1,11 @@
 import React, { useState, useLayoutEffect } from 'react';
-import { StyleSheet, View, KeyboardAvoidingView } from 'react-native';
-import { Button, Input, Image, Text } from 'react-native-elements';
+import { StyleSheet, View, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
+import { Button, Input, Text } from 'react-native-elements';
 import { StatusBar } from "expo-status-bar";
-import { NavigationContainer } from '@react-navigation/native';
 import { auth } from '../firebase';
 import LoadingScreen from './LoadingScreen';
+import { AntDesign } from "@expo/vector-icons";
+
 
 const RegisterScreen = ({ navigation }) => {
   const [name, setName] = useState("");
@@ -15,7 +16,15 @@ const RegisterScreen = ({ navigation }) => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerBackTitle: "Back to Login"
+      headerBackTitle: "Back to Login",
+      headerLeft: () => (
+        <TouchableOpacity
+          style={{ marginLeft: 10 }}
+          onPress={navigation.goBack}
+        >
+          <AntDesign name="arrowleft" size={24} color="white" />
+        </TouchableOpacity>
+      ),
     })
   }, []);
 
@@ -71,7 +80,7 @@ const RegisterScreen = ({ navigation }) => {
             type="text" 
             value={imageUrl} 
             onChangeText={text => setImageUrl(text)}
-            onSubmitEditing={register}
+            onSubmitEditing={() => {(password && email && name) && register()}}
           />
         </View>
 
@@ -80,6 +89,7 @@ const RegisterScreen = ({ navigation }) => {
           raised 
           onPress={register} 
           title="Register" 
+          disabled={!password || !email || !name}
         />
 
         <View stle={{ height: 100 }}/>

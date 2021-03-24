@@ -1,9 +1,10 @@
 import React, { useLayoutEffect, useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { db } from '../firebase';
 import { StatusBar } from 'expo-status-bar';
+import { AntDesign } from "@expo/vector-icons";
 
 const AddChatScreen = ({ navigation }) => {
   const [input, setInput] = useState("");
@@ -12,6 +13,14 @@ const AddChatScreen = ({ navigation }) => {
     navigation.setOptions({
       title: "Add a new chat",
       headerBackTitle: "Chats",
+      headerLeft: () => (
+        <TouchableOpacity
+          style={{ marginLeft: 10 }}
+          onPress={navigation.goBack}
+        >
+          <AntDesign name="arrowleft" size={24} color="white" />
+        </TouchableOpacity>
+      ),
     });
   }, [navigation]);
 
@@ -30,7 +39,7 @@ const AddChatScreen = ({ navigation }) => {
         placeholder="Enter a chat name"        
         value={input}
         onChangeText={(text) => setInput(text)}
-        onSubmitEditing={createChat }
+        onSubmitEditing={() => {input && createChat()}}
         leftIcon={
           <Icon name="wechat" type="antdesign" size={24} color="black" />
         }

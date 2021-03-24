@@ -3,13 +3,13 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCbviz_gqH6Wx897Sfd4H1JRZtAcmPkOps",
-  authDomain: "signal-clone-2e211.firebaseapp.com",
-  projectId: "signal-clone-2e211",
-  storageBucket: "signal-clone-2e211.appspot.com",
-  messagingSenderId: "125473289971",
-  appId: "1:125473289971:web:5e3363c14307a9ac6a6986",
-  measurementId: "G-WEGSEQGW4L"
+  apiKey: "AIzaSyC9qAwD8R718019dMeC-gyvlZ2rGnY0qz0",
+  authDomain: "signal-clone-a1ff9.firebaseapp.com",
+  projectId: "signal-clone-a1ff9",
+  storageBucket: "signal-clone-a1ff9.appspot.com",
+  messagingSenderId: "537272729071",
+  appId: "1:537272729071:web:71824cb2077be4f415ca1a",
+  measurementId: "G-YFPL1JGRMQ"
 };
 
 let app;

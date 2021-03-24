@@ -18,8 +18,6 @@ const HomeScreen = ({ navigation }) => {
       })))
     });
 
-    console.log(chats);
-
     return unsubscribe;
   }, [])
 

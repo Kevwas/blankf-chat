@@ -57,9 +57,9 @@ const LoginScreen = ({ navigation }) => {
             type="password"
             value={password}
             onChangeText={text => setPassword(text)}
-            onSubmitEditing={signIn}
+            onSubmitEditing={() => {(password && email) && signIn}}
           />
-          <Button containerStyle={styles.button} onPress={signIn} title="Login" /> 
+          <Button disabled={!password || !email} containerStyle={styles.button} onPress={signIn} title="Login" /> 
           <Button containerStyle={styles.button} type="outline" onPress={() => navigation.navigate("Register")} title="Register" /> 
         </View>
         <View stle={{ height: 100 }}/>
