@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from 'react';
 import { StyleSheet, View, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import { Button, Input, Text } from 'react-native-elements';
 import { StatusBar } from "expo-status-bar";
-import { auth } from '../firebase';
+import { auth } from '../firebase-config';
 import LoadingScreen from './LoadingScreen';
 import { AntDesign } from "@expo/vector-icons";
 

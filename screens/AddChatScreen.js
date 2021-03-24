@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useState } from 'react'
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { db } from '../firebase';
+import { db } from '../firebase-config';
 import { StatusBar } from 'expo-status-bar';
 import { AntDesign } from "@expo/vector-icons";
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, SafeAreaView, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView } from 'react-native-gesture-handler';
 import { AntDesign, SimpleLineIcons } from "@expo/vector-icons";
 import CustomListItem from '../components/CustomListItem';
-import { Avatar, Image } from 'react-native-elements';
-import { auth, db } from '../firebase';
+import { Avatar } from 'react-native-elements';
+import { auth, db } from '../firebase-config';
 
 const HomeScreen = ({ navigation }) => {
   const [chats, setChats] = useState([]);

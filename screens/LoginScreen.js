@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, View, KeyboardAvoidingView } from 'react-native';
 import { Button, Input, Image } from 'react-native-elements';
 import { StatusBar } from 'expo-status-bar';
-import { auth } from 'firebase';
+import { auth } from '../firebase-config';
 import LoadingScreen from './LoadingScreen';
 
 const LoginScreen = ({ navigation }) => {
@@ -11,7 +11,7 @@ const LoginScreen = ({ navigation }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsuscribe = auth().onAuthStateChanged((authUser) => {
+    const unsuscribe = auth.onAuthStateChanged((authUser) => {
       if(authUser) {
         navigation.replace("Home");
       } 
@@ -23,7 +23,7 @@ const LoginScreen = ({ navigation }) => {
 
   const signIn = () => {
     setLoading(true);
-    auth()
+    auth
       .signInWithEmailAndPassword(email, password)
       .catch(err => alert(err))
       .finally(() => setLoading(false));

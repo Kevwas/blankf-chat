@@ -16,7 +16,7 @@ import { ScrollView } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Keyboard } from 'react-native';
 import * as firebase from 'firebase';
-import { db, auth } from '../firebase';
+import { db, auth } from '../firebase-config';
 
 const ChatScreen = ({ navigation, route: { params } }) => {
   const [input, setInput] = useState("");
