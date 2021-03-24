@@ -1,4 +1,4 @@
-Blankf-Chat Demo
+Blankf-Chat Demo App
 
 - Clone the blank-chat code into your desired directory in your machine.
 - Install expo cli: https://docs.expo.io/get-started/installation/
