@@ -3,13 +3,13 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC9qAwD8R718019dMeC-gyvlZ2rGnY0qz0",
-  authDomain: "signal-clone-a1ff9.firebaseapp.com",
-  projectId: "signal-clone-a1ff9",
-  storageBucket: "signal-clone-a1ff9.appspot.com",
-  messagingSenderId: "537272729071",
-  appId: "1:537272729071:web:71824cb2077be4f415ca1a",
-  measurementId: "G-YFPL1JGRMQ"
+  apiKey: "AIzaSyDYnxSZsJ6tuua9oODSIHoyVVWW_ZiYkls",
+  authDomain: "blankf-chat.firebaseapp.com",
+  projectId: "blankf-chat",
+  storageBucket: "blankf-chat.appspot.com",
+  messagingSenderId: "751221901769",
+  appId: "1:751221901769:web:63ff4436634fb60a400018",
+  measurementId: "G-4YGD03TX34"
 };
 
 let app;
